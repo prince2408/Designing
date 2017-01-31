@@ -9,7 +9,8 @@ package design.pattern;
  */
 public class Singleton {
 
-	private static Singleton instance = new Singleton();
+	//Early loading because singleton instance is created while class is loaded into memory
+	private static final Singleton instance = new Singleton();
 	private  Singleton(){
 		
 	}
@@ -49,6 +50,8 @@ class SingletonDoubleCheck{
 	
 	public static SingletonDoubleCheck getInstanceQT(){
 		if(instance == null){
+			// Lazy loading because singleton instance is created only when client calls
+			// getInstance();
 			instance = new SingletonDoubleCheck();
 		}
 		return instance;

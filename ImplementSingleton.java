@@ -1,7 +1,12 @@
 package design.pattern;
 
 import sun.jvm.hotspot.code.SingletonBlob;
-
+/**
+ * Example of singleton is Runtime class which provides the 
+ * getRuntime method with a singleton scope.
+ * @author abhkumar
+ *
+ */
 public class ImplementSingleton {
 
 
